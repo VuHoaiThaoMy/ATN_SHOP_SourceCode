@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page X' }}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    text-align: center;
+}
+.logo img
+{
+    width: 6.5%;
+}
+.open-button
+{
+    background-color: black;
+    color: rgb(236, 155, 155);
+    padding: 15px 15px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 200px;
+    border-radius:17px;
+}
+.chat
+{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    font-size: 13px;
+}
+.container1
+{
+    text-align: center;
+    max-width: 220px;
+    padding: 9px;
+    background-color: rgb(204, 235, 233);
+}
+.container1 textarea
+{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+.container1 textarea:focus
+{
+    background-color: lightgrey;
+    outline: none;
+}
+.container1 .btn
+{
+    background-color: rgb(236, 155, 155);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+.container1 .cancel
+{
+    background-color:rgb(236, 155, 155);
+    border-radius: 10px;
+}
+.container1 .btn:hover, .open-button:hover
+{
+    opacity: 1;
+}
+*{
+    box-sizing: border-box;
+}
+body 
+{
+    background-color:rgb(236, 155, 155);
+}
+.row 
+{
+    margin: 5px 20px;
+}
+.row,.row > .column0 
+{
+  padding: 10px;
+}
+.column0 
+{
+  float: left;
+  width: 25%;
+  display: none;
+}
+.row:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+.show 
+{
+  display: block;
+}
+.card 
+{
+	box-shadow: 2px 6px 10px 0 rgb(139, 10, 10);
+    border-radius: 14px;
+	max-width: 350px;
+	margin-left: 20px;
+	text-align: center;
+    padding: 10px;
+}
+.title0
+{
+	color: rgb(236, 155, 155);
+	font-size: 16px;
+}
+a 
+{
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+}
+a:hover
+{
+    color: rgb(236, 155, 155);
+}
+</style>
+</head>
+<body>
+    {{>header  title=this.title}}
+
+    <main>
+        <div class="container" >
+        <div class="logo">
+            <img src="atn.jpg" />
+            <p style="font-size: 13px;">--- Toys For Teenagers ---</p></div></div>
+        
+        <div class="container0"><form action="/action_page.php">
+            <h2 style="text-align:center; font-size:22px"><b> PROFILE CARD </b></h2>
+        <div class="row">
+	    <div class="column0 pro">
+		<div class="card">
+     		<img style="width:100%;" src="my.jpg">
+	 		<h1 style="font-size:20px"> MS. THAO MY </h1>
+	 		<p class="title0"><i> CEO ATN_SHOP </i></p>
+			<div style="margin: 0;">
+  	 			<a href="sms://+84797613514;?&amp;body=Hello%20World"><i class="fa fa-comment"></i></a>
+  	 			<a href="tel:079.761.3514"><i class="fa fa-phone"></i></a>
+     			<a href="mailto:myvu2411@gmail.com"><i class="fa fa-envelope"></i></a>
+     			<a href="https://www.facebook.com/tmie2411"><i class="fa fa-facebook"></i></a></div></div></div>
+	    <div class="column0 pro">
+		<div class="card">
+     		<img style="width:100%;" src="khoi.jpg">
+	 		<h1 style="font-size:20px"> MR. DINH KHOI </h1>
+	 		<p class="title0"><i> MARKETING MANAGEMENT ATN_SHOP </i></p>
+		<div style="margin: 0;">
+  	 		<a href="sms://+84797613514;?&amp;body=Hello%20World"><i class="fa fa-comment"></i></a>
+  	 		<a href="tel:079.761.3514"><i class="fa fa-phone"></i></a>
+     		<a href="mailto:myvu2411@gmail.com"><i class="fa fa-envelope"></i></a>
+     		<a href="https://www.facebook.com/tmie2411"><i class="fa fa-facebook"></i></a></div></div></div>
+        <div class="column0 pro">
+		<div class="card">
+     		<img style="width:100%;" src="tram.jpg">
+	 		<h1 style="font-size:20px"> MS. BAO TRAM </h1>
+	 		<p class="title0"><i> SALES MANAGER ATN_SHOP </i></p>
+		<div style="margin: 0;">
+  	 		<a href="sms://+84797613514;?&amp;body=Hello%20World"><i class="fa fa-comment"></i></a>
+  	 		<a href="tel:079.761.3514"><i class="fa fa-phone"></i></a>
+     		<a href="mailto:myvu2411@gmail.com"><i class="fa fa-envelope"></i></a>
+     		<a href="https://www.facebook.com/tmie2411"><i class="fa fa-facebook"></i></a></div></div></div>
+	    <div class="column0 pro">
+		<div class="card">
+     		<img style="width:100%;" src="nhi.jpg">
+	 		<h1 style="font-size:20px"> MS. THAO NHI </h1>
+	 		<p class="title0"><i> SALES MANAGER ATN_SHOP </i></p>
+		<div style="margin: 0;">
+  	 		<a href="sms://+84797613514;?&amp;body=Hello%20World"><i class="fa fa-comment"></i></a>
+  	 		<a href="tel:079.761.3514"><i class="fa fa-phone"></i></a>
+     		<a href="mailto:myvu2411@gmail.com"><i class="fa fa-envelope"></i></a>
+     		<a href="https://www.facebook.com/tmie2411"><i class="fa fa-facebook"></i></a></div></div></div></div></form></div>
+        <script>
+        filterSelection("all")
+        function filterSelection(c)
+        {
+            var x, i;
+            x = document.getElementsByClassName("column0");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) 
+            {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+        function w3AddClass(element, name) 
+        {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) 
+            {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+        function w3RemoveClass(element, name) 
+        {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) 
+            {
+                while (arr1.indexOf(arr2[i]) > -1) 
+                {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+        </script>    
+
+        <button style="font-size: 12px;" class="open-button" onclick="openForm()"><b> CHAT </b></button>
+        <div class="chat" id="myForm">
+            <form action="/action_page.php" class="container1">
+                <h style="font-size: 18px;"><b> CHAT WITH ATN-SHOP </b></h>
+            <h2 style="text-align: left; font-size: 12px;" ><label for="msg"><i> Message: </i></label></h2>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+        <button style="font-size: 12px;" type="submit" class="btn"><b> Send </b></button>
+        <button style="font-size: 12px;" type="button" class="btn cancel" onclick="closeForm()"><b> Close </b></button></form></div>
+        <script>
+            function openForm()
+            {
+                document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm()
+            {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+    </main>
+    {{>footer}}
+</body>
+</html>

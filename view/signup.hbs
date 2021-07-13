@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page X' }}
+<head>
+<style>
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: rgb(236, 155, 155);
+}
+.container
+{
+    text-align: center;
+}
+.logo img
+{
+    width: 10%;
+}
+.open-button
+{
+    background-color: black;
+    color: rgb(236, 155, 155);
+    padding: 15px 15px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 200px;
+    border-radius:17px;
+}
+.chat
+{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    font-size: 13px;
+}
+.container1
+{
+    text-align: center;
+    max-width: 220px;
+    padding: 9px;
+    background-color: rgb(204, 235, 233);
+}
+.container1 textarea
+{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+.container1 textarea:focus
+{
+    background-color: lightgrey;
+    outline: none;
+}
+.container1 .btn
+{
+    background-color: rgb(236, 155, 155);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+.container1 .cancel
+{
+    background-color:rgb(236, 155, 155);
+    border-radius: 10px;
+}
+.container1 .btn:hover, .open-button:hover
+{
+    opacity: 1;
+}
+input[type="text"], input[type="password"]
+{
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    line-height: 10px;
+    border-radius: 7px;
+}
+input[type="text"]:hover, input[type="password"]:hover
+{
+    opacity: 1;
+}
+.container0
+{
+    float: middle;
+    width: 60%;
+    margin: auto;
+    padding: 10px 80px;
+    margin-top: 6px;
+    text-align: center;
+}
+.signupbtn0
+{
+    padding: 8px 18px;
+    background-color:black;
+    border-radius: 7px;
+}
+.cancelbtn0
+{
+    padding: 8px 18px;
+    background-color:black;
+    border-radius: 7px;
+}
+.cancelbtn0,.signupbtn0
+{
+    float: left;
+    width: 50%;
+}
+.clearfix::after 
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 300px) 
+{
+    .cancelbtn0,.signupbtn0 
+    {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+    {{>header  title=this.title}}
+
+    <main>
+        <div class="container" >
+        <div class="logo">
+            <img src="atn.jpg" />
+            <p style="font-size: 13px;">--- Toys For Teenagers ---</p></div></div>
+        
+                <h2 style="text-align: center;"> SIGN UP </h2>
+            <form action="/action_page.php" style="border:1px solid #ccc">
+        <div class="container0">
+            <label><b> Username </b></label>
+                <input type="text" name="username" placeholder="Enter Username.." required>
+            <label><b>Password</b></label>
+                <input type="password" name="psw" placeholder="Enter Password.." required>
+            <label><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password.." name="psw-repeat" required>
+                <input type="checkbox" checked="checked"><b>Remember me?</b>
+                <p> To create an account you have to agree our <a href="https://policies.google.com/privacy?hl=en-US"><i>Terms & Privacy</i></a>.</p>
+        <div class="clearfix">
+            <button type="button0" class="cancelbtn0"><b style="color:rgb(236, 155, 155);">Cancel</b></button>
+            <button type="submit0" class="signupbtn0"><b style="color:rgb(236, 155, 155);">SIGN UP</b></button></div></div></form>
+
+        <button style="font-size: 12px;" class="open-button" onclick="openForm()"><b> CHAT </b></button>
+        <div class="chat" id="myForm">
+            <form action="/action_page.php" class="container1">
+                <h style="font-size: 18px;"><b> CHAT WITH ATN-SHOP </b></h>
+            <h2 style="text-align: left; font-size: 12px;" ><label for="msg"><i> Message: </i></label></h2>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+        <button style="font-size: 12px;" type="submit" class="btn"><b> Send </b></button>
+        <button style="font-size: 12px;" type="button" class="btn cancel" onclick="closeForm()"><b> Close </b></button></form></div>
+        <script>
+            function openForm()
+            {
+                document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm()
+            {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+    </main>
+    
+
+    {{>footer}}
+</body>
+
+</html>

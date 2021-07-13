@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page X' }}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+{
+  margin: 0;
+  padding: 0;
+}
+.container
+{
+  text-align: center;
+}
+.logo img
+{
+  width: 8%;
+}
+.open-button
+{
+  background-color: black;
+  color: rgb(236, 155, 155);
+  padding: 15px 15px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 200px;
+  border-radius:17px;
+}
+.chat
+{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  font-size: 13px;
+}
+.container1
+{
+  text-align: center;
+  max-width: 220px;
+  padding: 9px;
+  background-color: rgb(204, 235, 233);
+}
+.container1 textarea
+{
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+.container1 textarea:focus
+{
+  background-color: lightgrey;
+  outline: none;
+}
+.container1 .btn
+{
+  background-color: rgb(236, 155, 155);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+.container1 .cancel
+{
+  background-color:rgb(236, 155, 155);
+  border-radius: 10px;
+}
+.container1 .btn:hover, .open-button:hover
+{
+  opacity: 1;
+}
+*{
+  box-sizing: border-box;
+}
+.row 
+{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.col-25 
+{
+  -ms-flex: 25%;
+  flex: 25%;
+}
+.col-50 
+{
+  -ms-flex: 30%; 
+  flex: 30%;
+}
+.col-75 
+{
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+.col-25,.col-50,.col-75 
+{
+  padding: 0 40px;
+}
+.container0 
+{
+  background-color: rgb(245, 245, 245);
+  padding: 5px 20px 15px 20px;
+  border: 1px solid #201d1d;
+  border-radius: 7px;
+}
+input[type=text]
+{
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+label 
+{
+  margin-bottom: 6px;
+  display: block;
+}
+.icon-container0 
+{
+  margin-bottom: 8px;
+  padding: 2.5px 0;
+  font-size: 20px;
+}
+.btn0 
+{
+  background-color: black;
+  color: rgb(233, 186, 198);
+  padding: 4px;
+  margin: 4px 0;
+  border: none;
+  width: 100%;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.btn0:hover 
+{
+  background-color: rgb(233, 186, 198);
+  color: black;
+}
+a 
+{
+  color: #2196F3;
+}
+hr 
+{
+  border: 1px solid lightgrey;
+}
+span.price 
+{
+  float: right;
+  color: grey;
+}
+@media (max-width: 800px) 
+{
+  .row 
+  {
+    flex-direction: column-reverse;
+  }
+  .col-25 
+  {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+    {{>header  title=this.title}}
+    <main>
+        <div class="container" >
+        <div class="logo">
+            <img src="atn.jpg" />
+            <p style="font-size: 13px;">--- Toys For Teenagers ---</p></div></div>
+        
+        <div class="row">
+        <div class="col-75">
+        <div class="container0">
+	        <form action="/action_page.php">
+        <div class="row">
+        <div class="col-50">
+	        <h3 style="font-size: 25px;"><b> BILLING ADDRESS </b></h3>
+            <label for="fname"><i class="fa fa-user"></i> FULL NAME </label>
+              <input type="text" id="fname" name="firstname" placeholder="Vu Hoai Thao My">
+            <label for="email"><i class="fa fa-envelope"></i> EMAIL </label>
+              <input type="text" id="email" name="email" placeholder="myvht2411@fpt.edu.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> ADDRESS </label>
+              <input type="text" id="adr" name="address" placeholder="321 Hong Bang Street">
+            <label for="city"><i class="fa fa-institution"></i> CITY </label>
+              <input type="text" id="city" name="city" placeholder="HCM city">
+        <div class="row">
+        <div class="col-50">
+            <label for="state"> STATE </label>
+              <input type="text" id="state" name="state" placeholder="HCM"></div>
+        <div class="col-50">
+            <label for="zip"> ZIP </label>
+              <input type="text" id="zip" name="zip" placeholder="10001"></div></div></div>
+
+        <div class="col-50">
+          <h3 style="font-size: 25px;"><b> PAYMENT </b></h3>
+            <label for="fname"> ACCEPTED CARDS </label>
+        <div class="icon-container0">
+          <i class="fa fa-cc-visa" style="color:navy;"></i>
+          <i class="fa fa-cc-amex" style="color:blue;"></i>
+          <i class="fa fa-cc-mastercard" style="color:red;"></i>
+          <i class="fa fa-cc-discover" style="color:orange;"></i></div>
+            <label for="cname"> NAME ON CARD </label>
+              <input type="text" id="cname" name="cardname" placeholder="VU HOAI THAO MY">
+            <label for="ccnum"> CREDIT CARD NUMBER </label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth"> EXP MONTH </label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="July">
+        <div class="row">
+        <div class="col-50">
+            <label for="expyear"> EXP YEAR </label>
+              <input type="text" id="expyear" name="expyear" placeholder="2021"></div>
+        <div class="col-50">
+            <label for="cvv"> CVV </label>
+              <input type="text" id="cvv" name="cvv" placeholder="352"></div></div></div></div>
+            <label style="text-align:center">
+              <input type="checkbox" checked="checked" name="sameadr"><i> Shipping address same as billing </i></label>
+              <input type="submit" value="CONTINUE TO CHECKOUT" class="btn0"></form></div></div>
+        
+        <div class="col-25">
+        <div class="container0">
+          <h4 style="font-size: 25px;"><b> CART </b><span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b> Number </b></span></h4>
+          <p><a href="#"> Product 1 </a> <span class="price"> $570 </span></p>
+          <p><a href="#"> Product 2 </a> <span class="price"> $490 </span></p>
+          <p><a href="#"> Product 3 </a> <span class="price"> $497 </span></p>
+          <p><a href="#"> Product 4 </a> <span class="price"> $530 </span></p><hr>
+          <p>Total <span class="price" style="color:black"><b> $2087 </b></span></p></div></div></div>
+
+        <button style="font-size: 12px;" class="open-button" onclick="openForm()"><b> CHAT </b></button>
+        <div class="chat" id="myForm">
+            <form action="/action_page.php" class="container1">
+                <h style="font-size: 18px;"><b> CHAT WITH ATN-SHOP </b></h>
+            <h2 style="text-align: left; font-size: 12px;" ><label for="msg"><i> Message: </i></label></h2>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+        <button style="font-size: 12px;" type="submit" class="btn"><b> Send </b></button>
+        <button style="font-size: 12px;" type="button" class="btn cancel" onclick="closeForm()"><b> Close </b></button></form></div>
+        <script>
+            function openForm()
+            {
+                document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm()
+            {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+    </main>
+    {{>footer}}
+</body>
+</html>

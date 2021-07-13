@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page X' }}
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    text-align: center;
+}
+.logo img
+{
+    width: 10%;
+}
+.open-button
+{
+    background-color: black;
+    color: rgb(236, 155, 155);
+    padding: 15px 15px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 200px;
+    border-radius:17px;
+}
+.chat
+{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    font-size: 13px;
+}
+.container1
+{
+    text-align: center;
+    max-width: 220px;
+    padding: 9px;
+    background-color: rgb(204, 235, 233);
+}
+.container1 textarea
+{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+.container1 textarea:focus
+{
+    background-color: lightgrey;
+    outline: none;
+}
+.container1 .btn
+{
+    background-color: rgb(236, 155, 155);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+.container1 .cancel
+{
+    background-color:rgb(236, 155, 155);
+    border-radius: 10px;
+}
+.container1 .btn:hover, .open-button:hover
+{
+    opacity: 1;
+}
+.container0
+{
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px 0 20px 0;
+}
+input[type="text"], input[type="password"], .btn
+{
+    width: 25%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    margin: 1px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 10px;
+    text-decoration: none;
+    float: middle;
+}
+input[type="text"]:hover, input[type="password"]:hover, .btn:hover
+{
+    opacity: 1;
+}
+.fb
+{
+    background-color: #0d3283;
+    color: rgb(236, 155, 155);
+}
+.google
+{
+    background-color: #a03527;
+    color: rgb(236, 155, 155);
+}
+.col
+{
+    float: middle;
+    width: 65%;
+    margin: auto;
+    padding: 10px 90px;
+    margin-top: 0;
+    text-align: center;
+}
+.col1
+{
+    float: middle;
+    width: 50.5%;
+    margin: auto;
+    padding: 3px 55px;
+    margin-top: 2px;
+    background:rgb(233, 186, 198);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 7px;
+}
+.vl
+{
+    float: middle;
+    width: 25%;
+    margin: auto;
+    padding: 2px 5px;
+    margin-top: 1px;
+    border-radius: 7px;
+    text-align: center;
+    background: black;
+}
+.vl:hover
+{
+    background: rgb(172, 172, 130);
+}
+.col1:hover
+{
+    background: rgb(172, 172, 130);
+}
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+.hide
+{
+    margin-top: 10px;
+    text-align: center;
+}
+.bottom-container
+{
+    text-align: center;
+    border-radius: 0px 0px 4px 4px;
+}
+@media screen and (max-width: 650px)
+{
+    .col1
+    {
+        width: 100%;
+        margin-top: 0;
+    }
+    .vl
+    {
+        display: none;
+    }
+    .hide
+    {
+        display: block;
+        text-align: center;
+    }
+}
+</style>
+</head>
+<body>
+    {{>header  title=this.title}}
+
+    <main>
+        <div class="container" >
+        <div class="logo">
+            <img src="atn.jpg" />
+            <p style="font-size: 13px;">--- Toys For Teenagers ---</p></div></div>
+        
+        <div class="container0">
+            <form action="/action_page.php">
+        <div class="row">
+            <h2 style="font-size: 23px; text-align: center"><b> Login with Social Media or Manually </b></h2>
+        <div class="col">
+            <a href="https://www.facebook.com/?stype=lo&jlou=AfeAIH2cRM5QStyC2B0fcDWWMrgy7RMaRhBbFT5XVHEtnqy-6dq1dJk5ydeXP-_ChKnz34dMecRJCUQEB6NKo7OldzwrNFWv8bE9LBFBmvuTmA&smuh=8789&lh=Ac9jW9oodzvLRrnIdTs" class="fb btn">
+                <i class="fa fa-facebook fa-fw"></i> Login with Facebook </a>
+            <a href="https://accounts.google.com/ServiceLogin/identifier?elo=1&flowName=GlifWebSignIn&flowEntry=AddSession" class="google btn">
+                <i class="fa fa-google fa-fw"></i> Login with Google+ </a>
+        <div class="hide">
+                <p><i> Or sign in manually: </i></p></div>
+            <input style="background: lightgrey;" type="text" name="username" placeholder="Username" required>
+            <input style="background: lightgrey;" type="password" name="password" placeholder="Password" required></div>
+                <p></p>
+        <div class="vl">
+            <a href="#" style="color:rgb(236, 155, 155)" class="btn"><b> LOG IN </b></a></div></div></form></div>
+        <div class="bottom-container">
+        <div class="row">
+        <div class="col1">
+            <a href="/signup" style="color:black" class="btn"><b> SIGN UP </b></a></div>
+        <div class="col1">
+            <a href="#" style="color: black" class="btn"><b> Forgot </b><i> password? </i></a></div></div></div>
+
+        <button style="font-size: 12px;" class="open-button" onclick="openForm()"><b> CHAT </b></button>
+        <div class="chat" id="myForm">
+            <form action="/action_page.php" class="container1">
+                <h style="font-size: 18px;"><b> CHAT WITH ATN-SHOP </b></h>
+            <h2 style="text-align: left; font-size: 12px;" ><label for="msg"><i> Message: </i></label></h2>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+        <button style="font-size: 12px;" type="submit" class="btn"><b> Send </b></button>
+        <button style="font-size: 12px;" type="button" class="btn cancel" onclick="closeForm()"><b> Close </b></button></form></div>
+        <script>
+            function openForm()
+            {
+                document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm()
+            {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+    </main>
+    {{>footer}}
+</body>
+
+</html>
